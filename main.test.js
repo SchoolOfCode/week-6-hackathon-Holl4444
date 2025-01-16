@@ -35,7 +35,7 @@ describe('Make sure we are getting correct types', () => {
 
 describe("Binary result within set limit", () => {
     it("Shouldn't exceed the maximum serial number 65536", () => {
-        const actual = decToBinary(65535).toString().length < 17;
+        const actual = decToBinary(65535).toString().length < 17 ;
         const expected = true;
         expect(actual).toBe(expected);
     });

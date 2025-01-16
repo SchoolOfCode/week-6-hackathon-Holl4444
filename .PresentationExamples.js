@@ -1,12 +1,12 @@
-//TRUE RESULT - Happy outcome
+//TRUE RESULTS - Happy outcome
 
-export function dBRecursive(num) {
-  if (num === 0) {
-    return num;
-  } else {
-    return (num % 2) + 10 * dBRecursive(Math.floor(num / 2));
-  }
+//get out of jail free
+if (serialNumber === 0) {
+  return serialNumber;
+} else {
+  return (
+    (serialNumber % 2) +
+    10 * decToBinary(Math.floor(serialNumber / 2))
+  );
 }
-
-
-
+//}

@@ -1,11 +1,11 @@
-export function decToBinary(num) {
+export function decToBinary(serialNumber) {
   let binaryString = '';
-  //While num is more than zero
-  let current = num;
+  //While serialNumber is more than zero
+  let current = serialNumber;
   while (current > 0) {
-    //add the remainder of num divided by 2 to the binary string
+    //add the remainder of serialNumber divided by 2 to the binary string
     binaryString += current % 2;
-    //Num becomes the floor of num divided by 2 because we have removed the remainder
+    //Num becomes the floor of serialNumber divided by 2 because we have removed the remainder
     current = Math.floor(current / 2);
   }
   //reverse the binary string
@@ -14,17 +14,25 @@ export function decToBinary(num) {
 }
 
 // //Alright smartypants! ->
+//decToBinary
 
-export function dBRecursive(num) {
+export function dBRecursive(serialNumber) {
   //get out of jail free
-  if (num === 0) {
-    return num;
+  if (serialNumber === 0) {
+    return serialNumber;
   } else {
     //multiply by ten to avoid having to reverse the string
     // call the function on repeat until the number is zero then unwind the call stack adding the answers one by one (or well multiplying in this case)!
-    return (num % 2) + 10 * dBRecursive(Math.floor(num / 2));
+    return (
+      (serialNumber % 2) +
+      10 * dBRecursive(Math.floor(serialNumber / 2))
+    );
   }
 }
+
+export const decToBinaryEasy = (serialNumber) => {
+  return serialNumber.toString();
+};
 
 //Whack in as needed to make sure they're integers -> console.log(typeof ((serialNumber % 2) + 10 * decToBinary(Math.floor(serialNumber / 2))));
 
