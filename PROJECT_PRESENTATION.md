@@ -51,7 +51,7 @@ To check  coverage, run the following command
 
 
 ## The Process
-I'll mostly just discuss the solo part of this project here but the project as a whole was a $${\color{orange}team effort}$$. I've linked to my awesome team mates' GitHub accounts in the acknowledgements section so you can go and admire their work!
+I'll mostly just discuss the solo part of this project here but the project as a whole was a $${\color{orange}team}$$ $${\color{orange}effort}$$. I've linked to my awesome team mates' GitHub accounts in the acknowledgements section so you can go and admire their work!
 Our separate test projects will have one presentation and must have a cohesive theme. We spent the first part of our project time brainstorming theme ideas (The amount of time to dedicate to this was decided in advance as we are a majority of creative types!). We then refined and delegated our individual tasks. The overall theme we chose was a space adventure. An escape room in three parts. To follow the story you have to visit each mini project.
 
 One of the techniques we used as a group was the $${\color{orange}BrainTrust}$$ technique. We learnt how useful it can be helping teammates make choices without foisting our ideas on them. As we started working individually, we stayed in a video conference, on camera but muted so that we were available when problems arose, to support one another and learn as a group.
