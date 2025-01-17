@@ -17,6 +17,11 @@
 The Challenge:\
 Creating a CodeWars like challenge with a theme that is continous across team members!
 Using Unit testing.
+You can find parts1:\
+https://github.com/SchoolOfCode/week-6-hackathon-Jackafella1 \
+and 2:\
+https://github.com/SchoolOfCode/week-6-hackathon-CarmenZak
+of the story at the links above.\
 More details can be found in the README file.
 
 
