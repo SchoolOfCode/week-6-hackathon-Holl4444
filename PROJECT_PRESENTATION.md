@@ -25,6 +25,7 @@ More details can be found in the README file.
 - Node
 - Vitest
 - Javascript
+- LLM
 
 
 ## Running Tests
@@ -75,6 +76,12 @@ At this point testing was done...and I spent some time trying to tie in the stor
 ![Mess](https://github.com/user-attachments/assets/d37ccf49-b71d-4014-958f-d6988d675987)
 After having a think I decided to hide the various response options in a hidden file and output them just once for each test refresh.\
 ![Better](https://github.com/user-attachments/assets/805a3dd3-16a3-49c5-a281-c127a0f69961)
+Finally I updated the output to be more visible using a bit of AI assisted wizardry and giving them colour.
+![Best](https://github.com/user-attachments/assets/7e02c6d8-7b39-4a41-888e-d338516103cc)
+
+A little aside on the AI:\
+I found chatGPT really helpful as a kind of assistant. Not wanting to get too distracted by the storytelling after writing a few outcome scenarios I asked chatGPT to give me more in the same style. Warning to those with an edgy sense of humour, my story had a little robot bludgeoning and chatGPT's first response, whatever it might have been got shut down hard by its programming! I had to request it again stating that it must avoid overt violence!
+
 
 
 ### What I learnt
