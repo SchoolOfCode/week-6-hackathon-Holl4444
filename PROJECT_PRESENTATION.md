@@ -22,7 +22,7 @@ You can find parts1:\
 https://github.com/SchoolOfCode/week-6-hackathon-Jackafella1 \
 and 2:\
 https://github.com/SchoolOfCode/week-6-hackathon-CarmenZak
-of the story at the links above.\
+of the story by following the links.\
 More details can be found in the README file.
 
 
