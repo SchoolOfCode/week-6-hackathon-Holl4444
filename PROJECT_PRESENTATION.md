@@ -91,7 +91,7 @@ Finally I updated the output to be more visible using a bit of AI assisted wizar
 ![Best](https://github.com/user-attachments/assets/7e02c6d8-7b39-4a41-888e-d338516103cc)
 
 A little aside on the $${\color{orange}AI}$$:\
-I found chatGPT really helpful as a kind of assistant. Not wanting to get too distracted by the storytelling after writing a few outcome scenarios I asked chatGPT to give me more in the same style. Warning to those with an edgy sense of humour, my story had a little robot bludgeoning and chatGPT's first response, whatever it might have been got shut down hard by its programming! I had to request it again stating that it must avoid overt violence!
+I found chatGPT really helpful as a kind of assistant. Not wanting to get too distracted by the storytelling after writing a few outcome scenarios I asked chatGPT to give me more in the same style. Warning to those with an edgy sense of humour, my story had a little robot bludgeoning and chatGPT's first response, whatever it might have been got shut down hard by its programming! I had to request it again stating that it must avoid overt violence! ... I'm glad we've learnt a little about neural networks and AI so I don't have to worry it was outraged!
 
 
 
