@@ -1,103 +1,113 @@
+# Make your own Codewars Style Challenge
 
-# 👾 Space Escape! 👾
+In this workshop, you'll create your own programming challenge for others to solve, similar to the ones you might have tackled on Codewars. You'll write unit tests to validate solutions. Then you can share your challenge with other bootcampers for them to solve. If a submitted solution passes all your tests, it will be considered a correct solution - just like on Codewars. This is a great chance to get creative and come up with a programming challenge to stump your peers!
 
-## Contents
-* [Overview](#overview)
-* [Tech Stack](#tech-stack)
-* [Running the Tests](#running-tests)
-* [Screenshots](#screenshots)
-* [Process](#the-process)
-* [What I learnt](#what-i-learnt)
-* [Continued development](#continued-development)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+## 💡 OBJECTIVES FOR THE WORKSHOP
 
-# Overview
+Here's a glimpse of what you'll be achieving by the end of this workshop:
 
-The Challenge:\
-Creating a CodeWars like challenge with a theme that is continous across team members!
-Using Unit testing.
-More details can be found in the challengeInstructions file.
+- Clearly describing a problem/task that you want others to solve
+- Writing unit tests to check whether their solution to your task is correct
+- Present your project plan, story, and anything else you feel supports your creation process and final outcome in a document
 
+## 🎟️ TICKETS
 
-## Tech Stack
+Time to dive into action! 🏊‍♂️ Here's what you'll be working on:
 
-- Node
-- Vitest
-- Javascript
+### 🎫 Ticket 1 - Setup
 
+Install Vitest and optionally set up an NPM `test` script that conveniently runs your tests.
 
-## Running Tests
+You will be making one kata each, but you will be in development teams. The aim is to co-elevate each other. There are several ways you can and should look to help each other:
 
-To run tests, run the following command
+- Brainstorming: Helping each make your ideas better, and giving feedback to each other to add different perspectives and improve the end product
+- Planning: You can help validate each others plans, and sense check in a team review the direction of your products
+- Check-ins: Regular team stand-ups / check-ins will help make sure you are building and making progress together
+- Support: You should aim to help each other overcome issues if one of your team is stuck and cannot Google their way out of it
+- Testing: You can act as a first line user test for each others katas. You might find it a good idea to book in regular checkpoints to demo to each other and get initial feedback in quick bursts, making sure you can build in and adapt to any useful feedback before official release of your katas
 
-```bash
-  npm run test
+### 🎫 Ticket 2 - Plan your kata
+
+Attack this as you would any other problem - plan, plan, plan and use our agile approach to create steps that allow you to build MVPs and incrementally reach your stretch goals. Brainstorm options with a technique like Disney Ideation. Once you have a compelling challenge and story idea, start breaking it down. Think about the goals of your challenge, and the scenarios you could provide to test if people have reached those goals. Provide any examples or additional details that are necessary for someone taking on your kata to understand the problem, but don't give away so much that it removes the challenge. You want to strike a balance - not too vague but not spoon-feeding the solution either.
+
+Write your kata's scenario in a comment in `main.js` and include the start of an exported function that your audience will use to solve it (like you've seen on the katas you've done before). If it's useful to see an example:
+
+```js
+/**
+ * Hello challenger! Your task is to write a function named `transformLength` which takes in a string and returns 1 if the length of the string is even and otherwise -1.
+ *
+ * Your implementation should handle strings whose length is between 0 (inclusive) and 2500 (inclusive).
+ *
+ * A few examples:
+ *    `transformLength("table")` should return -1 as the length of "table" is not even
+ *    `transformLength("wizard")` should return 1 as the length of "wizard" is even
+ */
+export function transformLength(string) {
+  // Good luck!
+}
 ```
 
-To check  coverage, run the following command
+ℹ️ The reason for leaving the function body empty is that you want the people solving your kata to write their own implementation from scratch. Your role is to provide the overall problem statement and function skeleton. The solving and coding is up to them! Leaving an incomplete skeleton function helps point them in the right direction without giving away a full working solution.
 
-```bash
-  npm run coverage
+### 🎫 Ticket 3 - Write your kata
+
+When drafting your test cases, consider the different inputs that could be passed to the solution function and any edge cases you want to account for. You could put into practice tools such as Equivalency Partitioning, Boundary Value Analysis, and Decision Tables if its useful. Think of test values that will thoroughly cover the expected functionality. The number of tests is up to you, but aim for sufficient coverage to validate correctness.
+
+Since you'll write tests before seeing people's solutions, focus on defining expected outputs for given inputs, without assumptions about how people actually wrote the code. You're testing for outcomes. You could follow a TDD workflow - write a failing test, then temporarily add code to pass it. Just be sure to remove the solution code before sharing the kata. This helps ensure your tests fail when logic is missing or incorrect and pass when implemented properly.
+
+If it's useful to see an example (continuing the `checkLength` example from earlier):
+
+```js
+import { test, expect } from "vitest";
+import { checkLength } from "./main.js";
+
+test("should return -1 for strings with an odd length", () => {
+  const expected = -1;
+  const actual = checkLength("table");
+  expect(actual).toBe(expected);
+});
+
+test("should return 1 for strings with an even length", () => {
+  const expected = 1;
+  const actual = checkLength("wizard");
+  expect(actual).toBe(expected);
+});
 ```
 
-## Screenshots
-![MainStory](https://github.com/user-attachments/assets/a34d0522-4de3-4189-9de6-ff65343e3e6a)
-![MainFunction](https://github.com/user-attachments/assets/bd9e2319-cab0-42b4-9fe2-0a6c60d4d809)
-![GoodResults/story](https://github.com/user-attachments/assets/6303e92c-962b-44be-a031-4a6ad77922b9)
-![Bad Result](https://github.com/user-attachments/assets/3bd8695f-2e09-4cfe-8b95-7999644d57cf)
+🎯 At this stage you should have a description of the problem in `main.js` and some tests in `main.test.js`.
 
+### 🎫 Ticket 4 - Check your tests
 
-## The Process
-I'll mostly just discuss the solo part of this project here but the project as a whole was a team effort. I've linked to my awesome team mates' GitHub accounts in the acknowledgements section so you can go and admire their work!
-Our separate test projects will have one presentation and must have a cohesive theme. We spent the first part of our project time brainstorming theme ideas (The amount of time to dedicate to this was decided in advance as we are a majority of creative types!). We then refined and delegated our individual tasks. The overall theme we chose was a space adventure. An escape room in three parts. To follow the story you have to visit each mini project.
+To verify your tests, temporarily add a working implementation to the solution function in `main.js`. Check that the tests fail before implementation and pass when the function is coded correctly. This validates that your tests accurately check for both incorrect and correct solutions. Remember to remove the solution code afterwards before sharing the kata.
 
-One of the techniques we used as a group was the BrainTrust technique. We had recently learnt about useful it can be helping teammates make choices without foisting our ideas on them. As we started working individually, we stayed in a video conference, on camera but muted so that we were available when problems arose, to support one another and learn as a group.
+If it's useful to see an example (continuing the `checkLength` example from earlier):
 
-My section was the final challenge - in order to defeat the villain of the piece we have to transform a given number into binary.
+```js
+export function checkLength(string) {
+  // Temporarily added the line below to check if tests pass, but will remove it before committing and pushing.
+  return string.length % 2 === 0 ? 1 : -1;
+}
+```
 
-We had worked with Vitest before so installing and setting it up was becoming second nature. After installing it as a developer dependency I added a test script to the package.json in order to run it with node.
-Although it doesn't fulfill the demands of TDD, I felt my best option was to solve the problem first so I would have something to test against. I made the three functions I would most expect to see people using to solve the puzzle. A .toString()
-function, one using an IF / ELSE block and finally the recursive function.
+### 🎫 Ticket 5 - Share your kata
 
-The next move was to fill in some tests. 
-First things first I checked my tests could fail (and continued to do so throughout the process). I started with what I wanted to see and tested several values checking for the expected results. I tried out Vitest's test.each() method to keep the code clean and to be able to adjust my variables easily.
-The next target was type as I had been a bit mischevious and asked for an integer as a return value to stymie users hoping to pass by using .toString(). I really struggled with this; I was keen to try out some of the other options within Vitest and had spotted expectTypeOf but whatever I tried I couldn't get one to fail without timing out. At first I thought I'd cracked the issue as I saw I was getting a ``` callstack exceeded``` error and as I was using the recursive function to test with at the time I thought by switching to the if/else function I would stop making hopeless calls. Sadly not, with a simpler function the test was unable to fail. After pawing over the docs again I came to the conclusion that I would need to play around with the .config file to make it work and I had run out of time to make big moves. I admitted defeat on this one and went back to keeping it simple.\
-![Simples](https://github.com/user-attachments/assets/22a7902a-d552-496b-8877-994e8e990e09)
+Before pushing your final kata repository, be sure to remove any solution code you added for test validation. You want to provide only the kata description, skeleton function, and test cases - no actual solutions. Once ready, share your repo link in the [learn.schoolofcode.co.uk Hackathon Channel](https://learn.schoolofcode.co.uk/path-player?courseid=bc17-qe&unit=66acf966524bf23f05018063Unit) so other bootcampers can find it, clone it, implement solutions, and run your tests to check their progress. This allows them to solve the programming challenge you've created!
 
-The other significant issue I came up against was thanks to my insistence on an integer return value. I didn't want to get into the territory of bigInts and binary numbers quickly get long so I had to limit the length of possible inputs! After a fair amount of negotiating with chatGPT and a binary converter site, I came to a decision about what the maximum decimal number could be in order to stay within 15 digits when converted to binary!\
-![BigInt](https://github.com/user-attachments/assets/9a07a657-1881-4ae0-868a-46415729c1eb)
+Share it with following format:
 
-I added a few more tests such as ensuring a Fail in the case of negative numbers and making sure results were in the limits set; I was about to sit and have a think about what else I might need when I remembered coverage tests. It was no trouble to install Vitest V8 and add a "coverage" script into the package.json after which I could see that remarkably I already had 100% coverage!\
-![Cover](https://github.com/user-attachments/assets/4b2ecc89-50bd-4107-82a3-90b132394af3)
+```
+Room: REPLACE_ME_WITH_YOUR_ROOM_NUMBER
+Name: REPLACE_ME_WITH_YOUR_NAME
+Link: REPLACE_ME_WITH_A_LINK_TO_YOUR_PUBLIC_GITHUB_REPO_CONTAINING_THE_KATA
+Overview: REPLACE_ME_WITH_A_BRIEF_DESCRIPTION_OF_WHAT_YOUR_KATA_IS_ABOUT
+```
 
-At this point testing was done...and I spent some time trying to tie in the story in a way that would keep users invested. By continuing to test you will get various different humorous scenarios of how you are defeated or how you are victorious. I had already thought about using the describe() and test() methods to do this but putting everything into the test output was disastrous. You could barely read the tests and were getting bombarded with the story element:\
-![Mess](https://github.com/user-attachments/assets/d37ccf49-b71d-4014-958f-d6988d675987)
-After having a think I decided to hide the various response options in a hidden file and output them just once for each test refresh.\
-![Better](https://github.com/user-attachments/assets/805a3dd3-16a3-49c5-a281-c127a0f69961)
+If it's not public already, remember to change the visibility of your repository to public.
 
+### 🎫 Ticket 6 - Present you kata
 
-### What I learnt
-A big takeaway for me was acknowledging that I am becoming less intimidated by documentation. Every week it becomes clearer!
-It was great to find a way to make testing just a little more creative. Hopefully as well as entertaining and keeping me focused, users will enjoy the bit of fun.
-I was able to learn to communicate with AI a little better, though I think I'll be sticking to the infallible CS50 rubberduck AI until I can figure out how to fully prevent them giving out spoilers!
-Taking the time to add variables to my tests was a great way to make them easy to read and update.
+Make sure you present your project in [the markdown file here](/PROJECT_PRESENTATION.md) - this will be assessed alongside your actual kata. Treat this as an asynchronous presentation - anything you would want to talk through (plans, brainstorming, final results, user feedback, etc) should go in here.
 
-### Continued development
-With more time I'd revisit the config file as it's the next frontier!
+### 🎫 Ticket 7 - Complete katas from others
 
-### Useful resources
-https://vitest.dev/
-
-## Authors
-
-- [@Holl4444](https://github.com/)
-
-  
-## Acknowledgements
-
- - [School of Code](https://schoolofcode.co.uk/)
- - [Carmen Zakaria](https://github.com/CarmenZak)
- - [J. Jack](https://github.com/Jackafella1)
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
-
+To solve katas created by other bootcampers, first clone their repository using the shared link. `cd` into the folder, run `npm install` to get the dependencies, then implement a solution in main.js. Execute their test cases to validate your code against their requirements. Provide feedback on the clarity of their instructions, difficulty level, and effectiveness of the tests. Engaging with each other's challenges allows everyone to learn. Make sure to critique respectfully - creating a programming challenge is difficult!
