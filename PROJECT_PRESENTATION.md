@@ -124,6 +124,4 @@ https://vitest.dev/
  - [School of Code](https://schoolofcode.co.uk/)
  - [Carmen Zakaria](https://github.com/CarmenZak)
  - [J. Jack](https://github.com/Jackafella1)
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
-
 
