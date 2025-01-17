@@ -64,21 +64,30 @@ function, one using an IF / ELSE block and finally the recursive function.
 The next move was to fill in some tests. 
 First things first I checked my tests could fail (and continued to do so throughout the process). I started with what I wanted to see and tested several values checking for the expected results. I tried out Vitest's test.each() method to keep the code clean and to be able to adjust my variables easily.
 The next target was type as I had been a bit mischevious and asked for an integer as a return value to stymie users hoping to pass by using .toString(). I really struggled with this; I was keen to try out some of the other options within Vitest and had spotted expectTypeOf but whatever I tried I couldn't get one to fail without timing out. At first I thought I'd cracked the issue as I saw I was getting a ``` callstack exceeded``` error and as I was using the recursive function to test with at the time I thought by switching to the if/else function I would stop making hopeless calls. Sadly not, with a simpler function the test was unable to fail. After pawing over the docs again I came to the conclusion that I would need to play around with the .config file to make it work and I had run out of time to make big moves. I admitted defeat on this one and went back to keeping it simple.\
+\
 ![Simples](https://github.com/user-attachments/assets/22a7902a-d552-496b-8877-994e8e990e09)
 
 The other significant issue I came up against was thanks to my insistence on an integer return value. I didn't want to get into the territory of bigInts and binary numbers quickly get long so I had to limit the length of possible inputs! After a fair amount of negotiating with chatGPT and a binary converter site, I came to a decision about what the maximum decimal number could be in order to stay within 15 digits when converted to binary!\
+\
 ![BigInt](https://github.com/user-attachments/assets/9a07a657-1881-4ae0-868a-46415729c1eb)
 
 ```Update``` : Wouldn't you know it, the very first tester managed to solve with .toString() anyway!
 
 I added a few more tests such as ensuring a Fail in the case of negative numbers and making sure results were in the limits set; I was about to sit and have a think about what else I might need when I remembered coverage tests. It was no trouble to install Vitest V8 and add a "coverage" script into the package.json after which I could see that remarkably I already had 100% coverage!\
+\
 ![Cover](https://github.com/user-attachments/assets/4b2ecc89-50bd-4107-82a3-90b132394af3)
 
 At this point testing was done...and I spent some time trying to tie in the story in a way that would keep users invested. By continuing to test you will get various different humorous scenarios of how you are defeated or how you are victorious. I had already thought about using the describe() and test() methods to do this but putting everything into the test output was disastrous. You could barely read the tests and were getting bombarded with the story element:\
+\
 ![Mess](https://github.com/user-attachments/assets/d37ccf49-b71d-4014-958f-d6988d675987)
+\
+\
 After having a think I decided to hide the various response options in a hidden file and output them just once for each test refresh.\
-![Better](https://github.com/user-attachments/assets/805a3dd3-16a3-49c5-a281-c127a0f69961)
-Finally I updated the output to be more visible using a bit of AI assisted wizardry and giving them colour.
+\
+![Better](https://github.com/user-attachments/assets/805a3dd3-16a3-49c5-a281-c127a0f69961) \
+\
+Finally I updated the output to be more visible using a bit of AI assisted wizardry and giving them colour.\
+\
 ![Best](https://github.com/user-attachments/assets/7e02c6d8-7b39-4a41-888e-d338516103cc)
 
 A little aside on the AI:\
