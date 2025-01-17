@@ -73,11 +73,11 @@ The other significant issue I came up against was thanks to my insistence on an 
 
 ```Update``` : Wouldn't you know it, the very first tester managed to solve with .toString() anyway!
 
-I added a few more tests such as ensuring a Fail in the case of negative numbers and making sure results were in the limits set; I was about to sit and have a think about what else I might need when I remembered $${\color{orange}coverage}$$ $${\color{orange}tests}$$. It was no trouble to install Vitest V8 and add a "coverage" script into the package.json after which I could see that remarkably I already had 100% coverage!\
+I added a few more tests such as ensuring a Fail in the case of negative numbers and making sure results were inside the limits set; I was about to sit and have a think about what else I might need when I remembered $${\color{orange}coverage}$$ $${\color{orange}tests}$$. It was no trouble to install Vitest V8 and add a "coverage" script into the package.json after which I could see that remarkably I already had 100% coverage!\
 \
 ![Cover](https://github.com/user-attachments/assets/4b2ecc89-50bd-4107-82a3-90b132394af3)
 
-At this point testing was done...and I spent some time trying to tie in the $${\color{orange}storys}$$ in a way that would keep users invested. By continuing to test you will get various different humorous scenarios of how you are defeated or how you are victorious. I had already thought about using the describe() and test() methods to do this but putting everything into the test output was disastrous. You could barely read the tests and were getting bombarded with the story element:\
+At this point testing was done...and I spent some time trying to tie in the $${\color{orange}stories}$$ in a way that would keep users invested. By continuing to test you will get various different humorous scenarios of how you are defeated or how you are victorious. I had already considered using the describe() and test() methods to output these but putting everything into the test output was disastrous. You could barely read the tests and were getting bombarded with the story element:\
 \
 ![Mess](https://github.com/user-attachments/assets/d37ccf49-b71d-4014-958f-d6988d675987)
 \
