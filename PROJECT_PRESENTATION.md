@@ -87,7 +87,7 @@ I found chatGPT really helpful as a kind of assistant. Not wanting to get too di
 
 
 ### What I learnt
-Keep it simple!\
+Keep it simple. Don't boil the ocean ... escpecially for nothing!\
 A big takeaway for me was acknowledging that I am becoming less intimidated by documentation. Every week it becomes clearer!
 It was great to find a way to make testing just a little more creative. Hopefully as well as entertaining and keeping me focused, users will enjoy the bit of fun.
 I was able to learn to communicate with AI a little better, though I think I'll be sticking to the infallible CS50 rubberduck AI until I can figure out how to fully prevent them giving out spoilers!
