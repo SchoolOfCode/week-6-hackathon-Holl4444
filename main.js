@@ -20,7 +20,6 @@
 //Return the binary code for the serial number as an integer.
 //Max serialNumber will be 65535
 
-
 // decToBinary(6) => 110
 // 1 => 1
 // 5 => 101
@@ -29,23 +28,29 @@
 
 //   -------------------------------------------------------------------------------------
 
-
 export const decToBinary = (serialNumber) => {
-
-    // return serialNumber in binary form
-    if (serialNumber === 0) {
+  // return serialNumber in binary form
+  if (serialNumber === 0) {
     return serialNumber;
-    } else {
+  } else {
     return (
-        (serialNumber % 2) +
-        10 * decToBinary(Math.floor(serialNumber / 2))
+      (serialNumber % 2) +
+      10 * decToBinary(Math.floor(serialNumber / 2))
     );
-    }
+  }
 };
 
-
-
 //   -------------------------------------------------------------------------------------
+
+
+// KEEP YOUR EYES PEELED FOR YOUR OUTCOMES(SHARED BEFORE TESTS). WHEN YOU PASS ALL TESTS READ 'WIN', OTHERWISE ENJOY YOUR DEFEAT!
+
+
+
+
+
+
+
 
 
 
@@ -65,5 +70,8 @@ export const decToBinary = (serialNumber) => {
 //Nothing to add below this point.
 
 import { winTexts, failTexts, randIndex } from './.SPOILER.js';
-console.log(`Fail: ${failTexts[randIndex()]}\n`);
-console.log(`Win: ${winTexts[randIndex()]}`);
+const textF = `Fail: ${failTexts[randIndex()]}`;
+const textW = `Win: ${winTexts[randIndex()]}\n`;
+console.log('\x1b[38;2;144;238;144m%s\x1b[0m', textW);
+console.log('\x1b[38;2;128;0;128m%s\x1b[0m', textF);
+
