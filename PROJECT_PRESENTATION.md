@@ -58,7 +58,7 @@ One of the techniques we used as a group was the $${\color{orange}BrainTrust}$$ 
 My section was the final challenge - in order to defeat the villain of the piece we have to transform a given number into binary.
 
 We had worked with Vitest before so installing and setting it up was becoming second nature. After installing it as a developer dependency I added a test script to the package.json in order to run it with node.
-Although it doesn't fulfill the demands of TDD, I felt my best option was to solve the problem first so I would have something to test against. I made the three functions I would most expect to see people using to solve the puzzle. A .toString()
+Although it doesn't fulfill the demands of $${\color{orange}TDD}$$, I felt my best option was to solve the problem first so I would have something to test against. I made the three functions I would most expect to see people using to solve the puzzle. A .toString()
 function, one using an IF / ELSE block and finally the recursive function.
 
 The next move was to fill in some tests. 
