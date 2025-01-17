@@ -74,6 +74,8 @@ The next target was type as I had been a bit mischevious and asked for an intege
 The other significant issue I came up against was thanks to my insistence on an integer return value. I didn't want to get into the territory of bigInts and binary numbers quickly get long so I had to limit the length of possible inputs! After a fair amount of negotiating with chatGPT and a binary converter site, I came to a decision about what the maximum decimal number could be in order to stay within 15 digits when converted to binary!\
 ![BigInt](https://github.com/user-attachments/assets/9a07a657-1881-4ae0-868a-46415729c1eb)
 
+```Update``` : Wouldn't you know it, the very first tester managed to solve with .toString() anyway!
+
 I added a few more tests such as ensuring a Fail in the case of negative numbers and making sure results were in the limits set; I was about to sit and have a think about what else I might need when I remembered coverage tests. It was no trouble to install Vitest V8 and add a "coverage" script into the package.json after which I could see that remarkably I already had 100% coverage!\
 ![Cover](https://github.com/user-attachments/assets/4b2ecc89-50bd-4107-82a3-90b132394af3)
 
@@ -90,6 +92,7 @@ I found chatGPT really helpful as a kind of assistant. Not wanting to get too di
 
 
 ### What I learnt
+Keep it simple!\
 A big takeaway for me was acknowledging that I am becoming less intimidated by documentation. Every week it becomes clearer!
 It was great to find a way to make testing just a little more creative. Hopefully as well as entertaining and keeping me focused, users will enjoy the bit of fun.
 I was able to learn to communicate with AI a little better, though I think I'll be sticking to the infallible CS50 rubberduck AI until I can figure out how to fully prevent them giving out spoilers!
