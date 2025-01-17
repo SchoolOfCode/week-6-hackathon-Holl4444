@@ -5,10 +5,11 @@
 * [Overview](#overview)
 * [Tech Stack](#tech-stack)
 * [Running the Tests](#running-tests)
-* [Screenshots](#screenshots)
 * [Process](#the-process)
 * [What I learnt](#what-i-learnt)
 * [Continued development](#continued-development)
+* [Useful Resources](#useful-resources)
+* [Screenshots](#screenshots)
 * [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
 
@@ -46,12 +47,6 @@ To check  coverage, run the following command
 ```bash
   npm run coverage
 ```
-
-## Screenshots
-![MainStory](https://github.com/user-attachments/assets/a34d0522-4de3-4189-9de6-ff65343e3e6a)
-![MainFunction](https://github.com/user-attachments/assets/bd9e2319-cab0-42b4-9fe2-0a6c60d4d809)
-![GoodResults/story](https://github.com/user-attachments/assets/6303e92c-962b-44be-a031-4a6ad77922b9)
-![Bad Result](https://github.com/user-attachments/assets/3bd8695f-2e09-4cfe-8b95-7999644d57cf)
 
 
 ## The Process
@@ -103,6 +98,12 @@ With more time I'd revisit the config file as it's the next frontier!
 
 ### Useful resources
 https://vitest.dev/
+
+## Screenshots
+![MainStory](https://github.com/user-attachments/assets/a34d0522-4de3-4189-9de6-ff65343e3e6a)
+![MainFunction](https://github.com/user-attachments/assets/bd9e2319-cab0-42b4-9fe2-0a6c60d4d809)
+![GoodResults/story](https://github.com/user-attachments/assets/6303e92c-962b-44be-a031-4a6ad77922b9)
+![Bad Result](https://github.com/user-attachments/assets/3bd8695f-2e09-4cfe-8b95-7999644d57cf)
 
 ## Authors
 
