@@ -17,7 +17,7 @@
 The Challenge:\
 Creating a CodeWars like challenge with a theme that is continous across team members!
 Using Unit testing.
-More details can be found in the challengeInstructions file.
+More details can be found in the README file.
 
 
 ## Tech Stack
