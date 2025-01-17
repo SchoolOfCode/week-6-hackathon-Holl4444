@@ -48,8 +48,6 @@ To check  coverage, run the following command
 ![Bad Result](https://github.com/user-attachments/assets/3bd8695f-2e09-4cfe-8b95-7999644d57cf)
 
 
-https://vitest.dev/
-
 ## The Process
 I'll mostly just discuss the solo part of this project here but the project as a whole was a team effort. I've linked to my awesome team mates' GitHub accounts in the acknowledgements section so you can go and admire their work!
 Our separate test projects will have one presentation and must have a cohesive theme. We spent the first part of our project time brainstorming theme ideas (The amount of time to dedicate to this was decided in advance as we are a majority of creative types!). We then refined and delegated our individual tasks. The overall theme we chose was a space adventure. An escape room in three parts. To follow the story you have to visit each mini project.
