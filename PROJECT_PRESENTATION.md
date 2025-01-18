@@ -104,7 +104,8 @@ I was able to learn to communicate with AI a little better, though I think I'll 
 Taking the time to add variables to my tests was a great way to make them easy to read and update.
 
 ### Continued development
-With more time I'd revisit the config file as it's the next frontier!
+With more time I'd revisit the config file as it's the next frontier!\
+I'd love to find a way to send one message when there are failed tests and one when all are passed, where you would receive a win scenario, to make the story clearer.
 
 ### Useful resources
 https://vitest.dev/
