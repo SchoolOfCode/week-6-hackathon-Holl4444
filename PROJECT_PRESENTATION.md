@@ -105,7 +105,7 @@ Taking the time to add variables to my tests was a great way to make them easy t
 
 ### Continued development
 With more time I'd revisit the config file as it's the next frontier!\
-I'd love to find a way to send one message when there are failed tests and one when all are passed, where you would receive a win scenario, to make the story clearer.
+I'd also love to find a way to send one message when there are failed tests and one when all are passed, to separate the winning and losing outcomes and make the story clearer.
 
 ### Useful resources
 https://vitest.dev/
